@@ -1,0 +1,42 @@
+{% extends "admin/base_admin.html" %}
+
+{% block title %}Insurance App - Администратор
+{% endblock %}
+
+{% block body %}
+
+<header>
+  <h1>Что будем администрировать?</h1>
+</header>
+
+{% if session.user_id %}
+<nav class="home-icons">
+  <a href="/AddInsurance/view"><div class="icon card1"></div></a>
+  <a href="/AddEvent/view"><div class="icon card2"></div></a>
+  <a href="/AddUser/view"><div class="icon card3"></div></a>
+  <a href="/AddPayment/view"><div class="icon card1"></div></a>
+</nav>
+
+{% else %}
+<h2>Чтобы получить доступ к администрированию, войдите в систему, введя свои регистрационные данные в форме ниже:</h2>
+<form method="post" action="/login/login" class="loginForm">
+  <label for="email">Логин:</label>
+  <input type="email" name="email" id="email" placeholder="ваш email" required autofocus value="{{ email }}">
+  <p>
+    <label for="password">Пароль:</label>
+    <input type="password" name="password" id="password" placeholder="ваш пароль" required>
+  </p>
+  <p>
+    <button type="submit">войти</button>
+  </p>
+</form>
+
+<!--		<div class="errorMessage"><h2>Для демонстрационного доступа к приложению введите следующую информацию:</h2>-->
+<!--			<p>e-mail: admin@admin.com </p>-->
+<!--			<p>password: 123</p>-->
+<!--		</div>-->
+<div class="errorMessage">{{userData.loginError}}</div>
+
+{% endif %}
+
+{% endblock %}

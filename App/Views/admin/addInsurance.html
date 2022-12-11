@@ -1,0 +1,30 @@
+{% extends "admin/base_admin.html" %}
+
+{% block title %}Insurance App - Оформить страховку{% endblock %}
+
+{% block body %}
+
+<header>
+  <h1>Новый договор</h1>
+</header>
+
+<form method="post" action="/AddInsurance/submit" class="userDetails">
+  <label for email>электронная почта</label>
+  <input placeholder="электронная почта" name="email" id="email"></input>
+  <label for ins_number>номер страховки</label>
+  <input placeholder="номер страховки" name="ins_number" id="ins_number"></input>
+  <label for ins_cat>тип страховки</label>
+  <input placeholder="1" name="ins_cat" id="ins_cat"></input>
+  <label for startdate>дата открытия</label>
+  <input placeholder="2022-03-25" name="startdate" id="statrdate"></input>
+  <label for enddate>дата закрытия</label>
+  <input placeholder="2024-03-25" name="enddate" id="enddate"></input>
+  <label for ins_status>статус страховки</label>
+  <input placeholder="1" name="ins_status" id="ins_status"></input>
+  <div class="submit" style="padding: 0">
+    <a href="/Admin/view">Назад</a>
+    <button type="submit" value="сохранить изменения">добавить договор</button>
+  </div>
+
+</form>
+{% endblock %}

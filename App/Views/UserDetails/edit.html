@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Insurance App - персональные данные клиента{% endblock %}
+
+{% block body %}
+
+    <header>
+	    <h1>Ваши персональные данные</h1>
+    </header>
+	
+    <form method="post" action="/Users/submit" class="userDetails">
+
+		{% for key, value in dataLabel %}
+			<label for {{ value }}>{{ value }}</label>
+			
+            {% for key, value in userData.contactData.0|slice(key,1) %}
+				<input placeholder="{{ value }}" name="{{ key }}" id="{{ key }}"></input>
+		    {% endfor %}
+
+	    {% endfor %}
+
+        <div class="submit">
+            <a href="/Users/view">Назад</a>
+            <button type="submit" value="сохранить изменения">сохранить изменения</button>
+        </div>
+
+    </form>
+{% endblock %}

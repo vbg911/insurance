@@ -1,0 +1,33 @@
+{% block nav %}
+	{% if session.user_id %}
+
+	<div class="navbar">
+		<div class="nav-icons">
+			<span class="home-icon">
+				<a href="/"><img src="/img/nav/home.png" alt="home icon"></a>
+			</span>
+			<span class="toggle">
+				<a id="toggle-icon">
+					<img src="/img/nav/menu.png" alt="toggle menu icon">
+				</a>
+			</span>
+			<span class="home-icon">
+				<a href="/logout"><img src="/img/nav/logout.png" alt="logout icon"></a>
+			</span>
+		</div>
+
+		<span class="notoggle nav-item"><a href="/Admin/view">Главная</a></span>
+		<div class="menu-items">
+			<span class="nav-item"><a href="/AddInsurance/view">Оформить страховку</a></span>
+			<span class="nav-item"><a href="/AddEvent/view">Оформить страховой случай</a></span>
+			<span class="nav-item"><a href="/AddUser/view">Добавить клиента</a></span>
+			<span class="nav-item"><a href="/AddPayment/view">Новый платеж</a></span>
+		</div>
+		<span class="notoggle nav-item"><a href="/logout">Выход</a></span>
+	</div>
+
+		{% else %}
+
+	{% endif %}
+
+{% endblock %}

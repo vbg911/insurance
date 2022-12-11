@@ -1,0 +1,493 @@
+/*** default browser style reset***/
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+blockquote,
+ul,
+dl,
+dd {
+    margin: 0;
+}
+
+p {
+    margin: 1rem 0;
+}
+
+body {
+    background-color: #fff;
+    box-sizing: border-box;
+    border: 0;
+    font-family: 'Public Sans', sans-serif;
+    padding: 0;
+}
+
+/* links */
+a {
+    color: #1D5174;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #F94C66;
+}
+
+/* content wrapper */
+.container {
+    background-color: #FEFEFE;
+    margin: 0 auto;
+    min-height: 100vh;
+    width: 80vw;
+}
+
+/* logo image */
+.logo {
+    padding: 1rem 2rem;
+    width: 20vh;
+}
+
+/*** navigation ***/
+.navbar {
+    background-color: #3AB0FF;
+    border-radius: 0.3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.5rem;
+}
+
+/* icons for mobile navigation */
+.nav-icons {
+    display: none;
+}
+
+/* container for app pages links */
+.menu-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    width: 60vw;
+}
+
+/* navigation links */
+.nav-item a {
+    display: inline-block;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.nav-item a:hover {
+    background-color: #F94C66;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    color: #f2f2f2;
+    transition: 0.2s;
+}
+
+/*** homepage cards container ***/
+.home-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    margin: 3rem;
+    max-width: 60vw;
+}
+
+/* card background images*/
+.card1 {
+    background: url('/img/icons/contract.png');
+}
+
+.card1:hover {
+    background: url('/img/icons/contract-wh.png');
+}
+
+.card2 {
+    background: url('/img/icons/event.png');
+}
+
+.card2:hover {
+    background: url('/img/icons/event-wh.png');
+}
+
+.card3 {
+    background: url('/img/icons/contact.png');
+}
+
+.card3:hover {
+    background: url('/img/icons/contact-wh.png');
+}
+
+/* cards */
+.icon {
+    background-color: #3AB0FF;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    border-radius: 0.3rem;
+    height: 10vw;
+    width: 10vw;
+    padding: 1rem;
+}
+
+.icon:hover {
+background-color: #F94C66;
+background-position: center;
+background-repeat: no-repeat;
+background-size: 80%;
+cursor: pointer;
+transition: 0.2s;
+}
+
+
+/*** main section ***/
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+    text-align: center;
+    min-height: 60vh;
+}
+
+.content {
+    margin: 10vh;
+}
+
+/* section title */
+main h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* section info */
+main h2 {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin: 2vh 0;
+}
+
+
+/*** table styling ***/
+table {
+    border: solid 1px #CCCCCC;
+    border-radius: 0.3rem;
+    text-align: left;
+}
+
+th {
+    color: #3AB0FF;
+    font-weight: 800;
+    padding: 0.5rem 1rem;
+}
+
+td {
+    padding: 0.5rem 1rem;
+}
+
+/* table container for desktop and tablet */
+.table-bigscreen {
+    margin: 2rem 0.5rem;
+    padding: 0.5rem;
+}
+
+/* table container for mobile */
+.table-mobile {
+    display: none;
+}
+
+/* flex container for details table */
+.displayDetails {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    margin: 2rem 0;
+    border: solid 1px #CCCCCC;
+    border-radius: 0.3rem;
+}
+
+/* table with data labels */
+.dataLabels {
+    border: none;
+    color: #3AB0FF;
+    font-weight: 800;
+    text-align: right;
+}
+
+/* table with data content */
+.dataContent {
+    border: none;
+}
+
+/* search icon image */
+.search-icon {
+    height:auto;
+    width:1rem;
+}
+
+
+/*** form styling ***/
+label {
+    font-weight: 600;
+}
+
+input {
+    background: #FEFEFE;
+    border-radius: 0.3rem;
+    border: solid 1px #CCCCCC;
+    font: inherit;
+    padding: 0.5rem;
+}
+
+input:focus {
+    background: #F9FDFF;
+    border: solid 1px #1D5174;
+    outline: none;
+}
+
+button {
+    border: 1px solid #FEFEFE;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #3AB0FF;
+    color: #ffffff;
+    font-size: 0.9rem;
+    margin: 0 0.1rem 0 0;
+    padding: 0.6rem;
+}
+
+button:hover {
+    background-color: #F94C66;
+    border: 1px solid #cc3e53;
+    border-radius: 0.3rem;
+    color: #FFFFFF;
+}
+
+/** styling for specific forms **/
+.loginForm {
+    margin: 3rem 2rem;
+}
+
+.loginForm input {
+    width: 25vw;
+}
+
+.loginForm label {
+    padding: 0 0.5rem 0 0;
+}
+
+.userDetails {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    text-align: left;
+}
+
+.userDetails input {
+    width: 20vw;
+}
+
+.userDetails label {
+    color: #3AB0FF;
+    font-weight: 800;
+    margin: 0.5rem 0 0;
+    padding: 0.3rem 0rem;
+}
+
+.submit {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 2rem 0;
+    padding: 0 2rem;
+}
+
+
+/* edited data table */
+.editMessage {
+border: 1px solid #CCCCCC;
+border-radius: 0.3rem;
+margin: 0.5rem auto 3rem;
+}
+
+/* error text */
+.errorMessage {
+    color: #cc3e53;
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin: 3rem 0;
+}
+
+/* footer */
+.footer-copyright {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 0.8rem;
+    margin: 1rem 0;
+}
+
+
+/*** 
+responsive behaviour 
+***/
+
+/*** tablets ***/
+@media screen and (max-width: 992px) {
+/** content wrapper **/
+    .container {
+        width: 100%;
+    }
+
+/** navigation **/
+    .navbar {
+        border-radius: 0;
+    }
+
+/** main section **/
+    .main {
+        margin: 1rem;
+        height: auto;
+    }
+
+/** forms **/
+    .loginForm input, .userDetails input {
+        width: 40vw;
+    }
+
+}
+
+/*** mobile ***/
+@media screen and (max-width: 500px) {
+
+    .body {
+        overflow-x: hidden;
+    }
+
+/** navigation - toggle menu **/
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* icons for mobile navigation */
+    .nav-icons {
+        display: flex;
+        flex-direction: row;
+        gap: 0 2rem;
+    }
+
+    /* toggle icon */
+    .toggle {
+        display: block;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* nav links visible on bigger devices*/
+    .notoggle {
+        display: none;
+    }
+
+    .menu-items {
+        display: none;
+    }
+
+    /* nav links in toggle menu*/
+    .menu-items.responsive {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+/** homepage cards container **/
+    .home-icons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+/** main section **/
+    main {
+        margin: 2rem 0rem;
+    }
+
+    .content {
+        margin: 5vh;
+    }
+
+    /* section title */
+    main h1 {
+        font-size: 1.4rem;
+    }
+
+/** forms **/
+    .loginForm input, .userDetails input {
+        width: 60vw;
+    }
+
+/** footer **/
+    .footer-copyright {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        font-size: 0.8rem;
+    }
+
+/** tables **/
+    /* table container for desktop and tablet */
+    .table-bigscreen {
+        display: none;
+    }
+    
+    /* table container for mobile */
+    .table-mobile {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: center;
+        margin: 1rem 0.2rem;
+        padding:0.4rem;
+        width: 80vw;
+        border: solid 1px #CCCCCC;
+        border-radius: 0.3rem;
+    }
+
+    .table-mobile td {
+        height: 2.4rem;
+        padding: 0;
+        text-align: left;
+    }
+
+    /* details table with data labels */
+    .dataLabels {  
+        margin: 0.6rem 0;
+        width: 36vw;
+    }
+    
+    /* details table with data content */
+    .dataContent {
+        margin: 0.6rem 0;
+        width: 36vw;
+    }
+
+}

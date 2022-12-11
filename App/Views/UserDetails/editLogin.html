@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Insurance App - смена пароля{% endblock %}
+
+{% block body %}
+
+    <header>
+        <h1>Введите новый пароль</h1>
+    </header>
+    
+    <form method="post" action="/Users/submitLogin" class="userDetails">
+                
+        <label for="password">Существующий пароль:</label>
+        <input type="password" placeholder="введите свой текущий пароль" name="password" id="password"></input>
+        
+        <label for="newpassword">Ваш новый пароль:</label>
+        <input type="password" placeholder="введите свой новый пароль" name="newpassword" id="newpassword"></input>
+
+        <label for="newpassword_repeat">Подтвердите новый пароль:</label>
+        <input type="password" placeholder="повторно введите свой новый пароль" name="newpassword_repeat" id="newpassword_repeat"></input>
+
+                
+        <div class="submit">
+            <a href="/Users/view">Назад</a>
+            <button type="submit" value="Uložit změny">сохранить изменения</button>
+        </div>
+    </form>
+
+{% endblock %}

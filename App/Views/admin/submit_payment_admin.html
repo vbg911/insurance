@@ -1,0 +1,39 @@
+{% extends "admin/base_admin.html" %}
+
+{% block title %}Insurance App - новый платеж
+{% endblock %}
+
+{% block body %}
+
+<header>
+  <h1>Новый платеж</h1>
+</header>
+
+{% if userData is empty %}
+<div class="errorMessage">
+  поля пустые.
+</div>
+
+{% else %}
+<div class="errorMessage">
+  Новый платеж добавлен:
+</div>
+
+<table class="editMessage">
+  <tr>
+    {% for key, value in dataLabel %}
+    <td>{{ value }}:</td>
+
+    {% for key, value in userData|slice(key,1) %}
+    <td>{{ value }}</td>
+  </tr>
+  {% endfor %}
+  {% endfor %}
+</table>
+{% endif %}
+
+<p>
+  <a href="/AddPayment/view">Вернуться к оформлению платежей</a>
+</p>
+
+{% endblock %}

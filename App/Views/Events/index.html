@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}Insurance App - страховые претензии клиента{% endblock %}
+
+{% block body %}
+	<header>
+		<h1>Ваши страховые случаи</h1>
+	</header>
+
+	{# display content on screens down to 500px #}
+	<table class="table-bigscreen">
+		<thead>
+			<tr>
+
+				{% for value in dataLabel %}
+					<th>{{ value }}</th>
+				{% endfor %}
+			</tr>
+		</thead>
+
+		<tbody>
+			{% for row in userData.eventsData %}	
+				<tr>
+					{% for cell in row %}
+						<td>
+							{{ cell }}
+						</td>
+					{% endfor %}
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+	{# display content on mobile screens up to 500px #}
+	<div class="table-mobile">
+		{% for row in userData.eventsData %}
+
+			<table class="dataLabels">
+				{% for value in dataLabel %}
+					<tr>
+						<td>{{ value }}</td>
+					</tr>
+				{% endfor %}
+			</table>
+
+			<table class="dataContent">
+				{% for cell in row %}
+					<tr>
+						<td>{{ cell }}</td>
+					</tr>
+				{% endfor %}
+			</table>
+		{% endfor %}
+
+	</div>
+
+{% endblock %}

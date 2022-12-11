@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Insurance App - Главная
+{% endblock %}
+
+{% block body %}
+
+<header>
+	<h1>Добро пожаловать в приложение для управления и регистрации страховых случаев</h1>
+</header>
+
+{% if session.user_id %}
+	<nav class="home-icons">
+		<a href="/Insurances/view"><div class="icon card1"></div></a>
+		<a href="/Events/view"><div class="icon card2"></div></a>
+		<a href="/Users/view"><div class="icon card3"></div></a>
+	</nav>
+
+	{% else %}
+		<h2>Чтобы получить доступ к приложению, войдите в систему, введя свои регистрационные данные в форме ниже:</h2>
+		<form method="post" action="/login/login" class="loginForm">
+			<label for="email">Логин:</label>
+			<input type="email" name="email" id="email" placeholder="ваш email" required autofocus value="{{ email }}">
+			<p>
+				<label for="password">Пароль:</label>
+				<input type="password" name="password" id="password" placeholder="ваш пароль" required>
+			</p>
+			<p>
+				<button type="submit">войти</button>
+			</p>
+		</form>
+
+<!--		<div class="errorMessage"><h2>Для демонстрационного доступа к приложению введите следующую информацию:</h2>-->
+<!--			<p>e-mail: vbg911@gmail.com </p>-->
+<!--			<p>password: 123</p>-->
+<!--		</div>-->
+		<div class="errorMessage">{{userData.loginError}}</div>
+
+{% endif %}
+
+{% endblock %}

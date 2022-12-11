@@ -1,0 +1,28 @@
+{% extends "admin/base_admin.html" %}
+
+{% block title %}Insurance App - Оформить страховой случай{% endblock %}
+
+{% block body %}
+
+<header>
+  <h1>Новый случай</h1>
+</header>
+
+<form method="post" action="/AddEvent/submit" class="userDetails">
+  <label for email>электронная почта</label>
+  <input placeholder="электронная почта" name="email" id="email"></input>
+  <label for ins_number>номер страховки</label>
+  <input placeholder="номер страховки" name="ins_number" id="ins_number"></input>
+  <label for event_num>номер случая</label>
+  <input placeholder="1231231" name="event_num" id="event_num"></input>
+  <label for startdate>дата случая</label>
+  <input placeholder="2022-03-25" name="startdate" id="statrdate"></input>
+  <label for ins_status>статус случая</label>
+  <input placeholder="1" name="ins_status" id="ins_status"></input>
+  <div class="submit" style="padding: 0">
+    <a href="/Admin/view">Назад</a>
+    <button type="submit" value="сохранить изменения">добавить случай</button>
+  </div>
+
+</form>
+{% endblock %}
